@@ -1,4 +1,6 @@
-# Pytorch implementation for paper *Beyond Alignment: Learning Ordinal-Aware Image-Tabular Representations for Composite Materials*
+## Pytorch implementation for *[Beyond Alignment: Learning Ordinal-Aware Image-Tabular Representations for Composite Materials](https://arxiv.org/abs/2602.02513)*
+
+
 ## Create environment
 ```
 conda env create -f environment.yml
@@ -20,11 +22,11 @@ cd scripts
 python train_order_dyn.py --dataset [composite/fiber] --mode train
 ```
 Command `--dataset` decides the Composite or Nanofiber dataset to use. Check `scripts/save/order_dyn` for results and log.
-- Pretrain an ORDER-alpha model with the following command:
+- Pretrain an ORDER- $\alpha$ model with the following command:
 ```
 python train_order_alpha.py --dataset [composite/fiber] --alpha [0.2/0.5/...] --mode train
 ```
-The `--alpha` command controls the $\alpha$ parameter used (specify `--alpha 0.0` for the 'Contra.' baseline). Check `scripts/save/order_alpha` for results and log.
+The `--alpha` command controls the $\alpha$ parameter used (specify `--alpha 0.0` for the 'CMCL' baseline). Check `scripts/save/order_alpha` for results and log.
 
 ## Pretrain
 - Pretrain an ORDER-dyn model with the following command:
@@ -32,18 +34,18 @@ The `--alpha` command controls the $\alpha$ parameter used (specify `--alpha 0.0
 python train_order_dyn.py --dataset [composite/fiber] --mode train
 ```
 Command `--dataset` decides the Composite or Nanofiber dataset to use. Check `scripts/save/order_dyn` for results and log.
-- Pretrain an ORDER-alpha model with the following command:
+- Pretrain an ORDER- $\alpha$ model with the following command:
 ```
 python train_order_alpha.py --dataset [composite/fiber] --alpha [0.2/0.5/...] --mode train
 ```
-The `--alpha` command controls the $\alpha$ parameter used (specify `--alpha 0.0` for the 'Contra.' baseline). Check `scripts/save/order_alpha` for results and log.
+The `--alpha` command controls the $\alpha$ parameter used (specify `--alpha 0.0` for the 'CMCL' baseline). Check `scripts/save/order_alpha` for results and log.
 
 ## Cross-modal retrieval
 - Retrieve using ORDER-dyn: 
 ```
 python train_order_dyn.py --dataset [composite/fiber] --mode test
 ```
-- Retrieve using ORDER-$\alpha$: 
+- Retrieve using ORDER- $\alpha$: 
 ```
 python train_order_alpha.py --dataset [composite/fiber] --alpha [0.2/0.5/...] --mode test
 ```
@@ -53,7 +55,7 @@ python train_order_alpha.py --dataset [composite/fiber] --alpha [0.2/0.5/...] --
 ```
 python predict.py --prefix [order_alpha/order_dyn] --alpha [0.2/0.5/...] --dataset [composite/fiber] --modal [image/tab]
 ```
-Command `--prefix` specifies the method used (ORDER-$\alpha$ or ORDER-dyn), `modal` specifies the modality used.
+Command `--prefix` specifies the method used (ORDER- $\alpha$ or ORDER-dyn), `modal` specifies the modality used.
 - Modality fusion prediction:
 ```
 python fusion_predict.py --prefix [order_alpha/order_dyn] --alpha [0.2/0.5/...] --dataset [composite/fiber] 
