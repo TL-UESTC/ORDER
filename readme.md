@@ -1,4 +1,4 @@
-## Pytorch implementation for *[Beyond Alignment: Learning Ordinal-Aware Image-Tabular Representations for Composite Materials](https://arxiv.org/abs/2602.02513)*
+## Pytorch implementation for *[Learning ORDER-Aware Multimodal Representations for Composite Materials Design](https://arxiv.org/abs/2602.02513)*
 
 
 ## Create environment
