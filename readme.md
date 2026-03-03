@@ -16,17 +16,6 @@ cd scripts
 - Our composite dataset is available upon request, please check DATA AVAILABILITY section in paper to address the request.
 
 
-## Pretrain
-- Pretrain an ORDER-dyn model with the following command:
-```
-python train_order_dyn.py --dataset [composite/fiber] --mode train
-```
-Command `--dataset` decides the Composite or Nanofiber dataset to use. Check `scripts/save/order_dyn` for results and log.
-- Pretrain an ORDER- $\alpha$ model with the following command:
-```
-python train_order_alpha.py --dataset [composite/fiber] --alpha [0.2/0.5/...] --mode train
-```
-The `--alpha` command controls the $\alpha$ parameter used (specify `--alpha 0.0` for the 'CMCL' baseline). Check `scripts/save/order_alpha` for results and log.
 
 ## Pretrain
 - Pretrain an ORDER-dyn model with the following command:
